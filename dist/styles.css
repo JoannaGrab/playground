@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+body {
+  font-family: "Lato", sans-serif;
+  transition: background-color .5s;
+}
+.topnav {
+  top: 0;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.topnav__title {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: #111;
+}
+.topnav__github {
+  width: 2em;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+.sidenav a,
+.sidenav__title {
+  padding: 8px 8px 8px 20px;
+  text-decoration: none;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+.sidenav a {
+  font-size: 1em;
+}
+.sidenav__title p {
+  font-size: 1.5em;
+  font-weight: 600;
+  padding-bottom: 20px;
+}
+.sidenav a:hover,
+.sidenav a:active,
+.sidenav__title p:hover,
+.sidenav__title p:active {
+  color: #f1f1f1;
+}
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  font-size: 36px;
+}
+ul {
+  list-style: none;
+}
+ul ul {
+  padding: 8px 8px 8px 25px;
+}
+.main {
+  margin: 1em;
+  padding: 1em;
+  border-radius: 0.5em;
+  transition: margin-left .5s;
+  background-color:peru;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+}
+.content__item {
+  margin-bottom: 1.5em;
+  font-size: 1.2em;
+  font-family: 'Roboto', sans-serif;
+  border: 1px solid wheat;
+  border-radius: 0.2em;
+}
+.content__item:last-child {
+  margin-bottom: 0mm;
+}
+.content__details {
+  overflow-wrap: break-word;
+}
+.content__chart {
+  height: 8em;
+}
+.content__visualization {
+  height: 5em;
+}
+
+
+
+/* Mobile styles */
+@media screen and (max-width: 400px) {
+  .sidenav__title p,
+  .sidenav .github__link {
+    display: none;
+  }
+}
+
+/* Tablet styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  .sidenav__title p,
+  .sidenav .github__link {
+    display: none;
+  }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+  .topnav,
+  .sidenav .closebtn {
+    display: none;
+  }
+  .sidenav {
+    width: 18em;
+    line-height: 1.2;
+    background-color: #111;
+  }
+  .sidenav__title p {
+    padding-left: 0.5em;
+  }
+  .sidenav__content {
+    position: absolute;
+    top: 7em;
+    bottom: 3em;
+    left: 1em;
+    width: 16em;
+    overflow: auto;
+  }
+  .sidenav_content {
+    /* This is the magic bit for Firefox */
+    scrollbar-width: none;
+  }
+  .sidenav__content::-webkit-scrollbar {
+    /* This is the magic bit for WebKit */
+    display: none;
+  }
+  .main {
+    position: fixed;
+    top: 1.5em;
+    left: 18em;
+    border-radius: 0.5em;
+    background-color:peru;
+    overflow: auto;
+  }
+
+}
+
+
+
+
+
+
+
