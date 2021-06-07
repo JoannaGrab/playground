@@ -1,9 +1,12 @@
-import temp from "./temp";
+import generateList from "./generateList";
+import bubbleSort from "./bubbleSort";
+import createAnimator from "./animator";
+import "regenerator-runtime/runtime";
 
-console.log("Hello World!Oneone");
-console.log(temp);
+const arr = generateList(6);
 
-const obj = { a: "alpha", b: "bravo" };
-const newObj = { ...obj, c: "charlie" };
+const animator = createAnimator(arr);
 
-console.log(newObj);
+document.querySelector(".run__button").onclick = () => {
+  bubbleSort(arr, animator.animate);
+};

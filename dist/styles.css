@@ -84,7 +84,7 @@ ul ul {
 .content__item {
   margin-bottom: 1.5em;
   font-size: 1.2em;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Lato", sans-serif;
   border: 1px solid wheat;
   border-radius: 0.2em;
 }
@@ -97,8 +97,54 @@ ul ul {
 .content__chart {
   height: 8em;
 }
-.content__visualization {
-  height: 5em;
+.content__animation {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+.run__button {
+background: #111;
+color: #f1f1f1;
+margin-top: 4em;
+padding: 1em;
+border-radius: .3em;
+font-family: "Lato", sans-serif;
+cursor: pointer;
+border: none;
+outline: none;
+}
+.run__button:hover {
+background: rgb(138, 105, 78);
+}
+.ball {
+  width: 1.8em;
+  height: 1.8em;
+  border-radius: 50%;
+  margin: 0.3em;
+  padding-top: 0.3em;
+  padding-left: 0.5em;
+  display: inline-block;
+}
+.ball0 {
+  background-color: rgb(149, 173, 149);
+}
+.ball1 {
+  background-color: rgb(132, 132, 168);
+}
+.ball2 {
+  background-color: rgb(235, 200, 180);
+}
+.ball3 {
+  background-color: rgb(241, 235, 137);
+}
+.ball4 {
+  background-color: rgb(138, 105, 78);
+}
+.ball5 {
+  background-color: rgb(164, 215, 245);
 }
 
 
@@ -157,12 +203,4 @@ ul ul {
     background-color:peru;
     overflow: auto;
   }
-
 }
-
-
-
-
-
-
-
