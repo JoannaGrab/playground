@@ -10,7 +10,9 @@ export default async function bubbleSort(elements, onSwap) {
         elements[j] = elements[j + 1];
         elements[j + 1] = tmp;
         // console.log(elements);
-        await onSwap(j, j + 1);
+        if (onSwap) {
+          await onSwap(j, j + 1);
+        }
       }
     }
   }

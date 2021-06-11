@@ -1,7 +1,6 @@
 import anime from "animejs/lib/anime.es";
 
-export default function createAnimator(arr) {
-  const setup = setupView(arr);
+export default function createAnimator(setup) {
   const animator = {
     setup: setup,
     animate: (a, b) => {
@@ -17,28 +16,6 @@ export default function createAnimator(arr) {
     },
   };
   return animator;
-}
-
-function setupView(arr) {
-  const animationContainer = document.createElement("div");
-  let setup = {};
-
-  for (let i = 0; i < arr.length; i++) {
-    const id = `i${i}`;
-    const animationItem = document.createElement("div");
-    animationItem.setAttribute("class", `ball ball${i}`);
-    animationItem.setAttribute("id", `${id}`);
-    animationItem.innerHTML = arr[i];
-    animationContainer.appendChild(animationItem);
-
-    setup[i] = id;
-  }
-
-  document
-    .querySelector(".animation__container")
-    .appendChild(animationContainer);
-
-  return setup;
 }
 
 function setupAnimation(t1, t2) {
