@@ -8,12 +8,10 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <script src="main.js"></script>
-
 
     <nav class="topnav">
-        <span style="font-size:30px;cursor:pointer" 
-              onclick="openNav()"
+        <span id="openNav"
+              class="topnav__menu"
               title="Menu">
               &#9776;
         </span>
@@ -30,8 +28,11 @@
 
 
     <div class="sidenav" id="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-
+        <a href="javascript:void(0)" 
+           class="closebtn" 
+           id="closeNav">
+           &times;
+        </a>
         <a class="sidenav__title"
             href="/"
             title="My playground">
@@ -40,37 +41,7 @@
 
         <ul class="sidenav__content">
             <li><a href='#'>Sorting</a></li>
-            <ul>
-                <li><a href='#'>Bubble Sort</a></li>
-                <li><a href='#'>Heap Sort</a></li>
-                <li><a href='#'>Insertion Sort</a></li>
-                <li><a href='#'>Quick Sort</a></li>
-                <li><a href='#'>Shell Sort</a></li>
-
-                <li><a href='#'>Bubble Sort</a></li>
-                <li><a href='#'>Heap Sort</a></li>
-                <li><a href='#'>Insertion Sort</a></li>
-                <li><a href='#'>Quick Sort</a></li>
-                <li><a href='#'>Shell Sort</a></li>
-
-                <li><a href='#'>Bubble Sort</a></li>
-                <li><a href='#'>Heap Sort</a></li>
-                <li><a href='#'>Insertion Sort</a></li>
-                <li><a href='#'>Quick Sort</a></li>
-                <li><a href='#'>Shell Sort</a></li>
-
-                <li><a href='#'>Bubble Sort</a></li>
-                <li><a href='#'>Heap Sort</a></li>
-                <li><a href='#'>Insertion Sort</a></li>
-                <li><a href='#'>Quick Sort</a></li>
-                <li><a href='#'>Shell Sort</a></li>
-
-                <li><a href='#'>Bubble Sort</a></li>
-                <li><a href='#'>Heap Sort</a></li>
-                <li><a href='#'>Insertion Sort</a></li>
-                <li><a href='#'>Quick Sort</a></li>
-                <li><a href='#'>Shell Sort</a></li>
-            </ul>
+            <ul id="sorting__content"></ul>
             <li><a href='#'>Games</a></li>
             <ul>
                 <li><a href='#'>Tower Of Hanoi</a></li>
@@ -84,27 +55,16 @@
 
     <div class="main">
         <section class="content">
-            <h3 class="content__item content__title">Bubble Sort</h3>
-            <p class="content__item content__details">
-                A simple sorting algorithm that repeatedly 
-                steps through the list, compares adjacent elements 
-                and swaps them if they are in the wrong order.</p>
-            <div class="content__item content__chart">Cool chart</div>
-            <div class="content__item content__visualization">Nice visualization</div>
+            <h3 class="content__item content__title"></h3>
+            <p class="content__item content__description"></p>
+            <div class="content__item content__chart"></div>  
+            <div class="content__item content__animation">
+                <div class="animation__container"></div>
+                <button class="run__button">Run</button>
+            </div>
         </section>
     </div>
-      
-    <script>
-        function openNav() {
-            document.getElementById("sidenav").style.width = "250px";
-            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-        }
-        
-        function closeNav() {
-            document.getElementById("sidenav").style.width = "0";
-            document.body.style.backgroundColor = "white";
-        }
-    </script>
 
+    <script src="main.js"></script>
 </body>
 </html>
