@@ -1,3 +1,7 @@
+import { createAnimator } from "./animator";
+import heapSort from "./algorithm";
+import setupHeapView from "./setupHeapView";
+
 export const heapsort = {
   id: "heap_sort",
   algorithm: "Heap Sort",
@@ -18,5 +22,11 @@ export const heapsort = {
     label: "Heap sort analysis",
     backgroundColor: "rgba(5, 9, 64, 2)",
     borderColor: "rgba(5, 9, 64, 2)",
+  },
+  runAnimation: async (arr, setup) => {
+    const setupHeap = setupHeapView(arr);
+    const animator = createAnimator(setup, setupHeap);
+    await animator.displayHeap();
+    heapSort(arr, animator.animateSwap, animator.animateSwapLast);
   },
 };

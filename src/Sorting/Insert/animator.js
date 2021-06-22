@@ -51,7 +51,7 @@ function setupAnimationSwap(t1, t2) {
           value: "+=46",
         },
       },
-      100
+      500
     )
     .add(
       {
@@ -60,7 +60,7 @@ function setupAnimationSwap(t1, t2) {
           value: "-=46",
         },
       },
-      100
+      500
     );
   return animation;
 }

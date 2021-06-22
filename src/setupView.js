@@ -5,7 +5,7 @@ export default function setupView(arr) {
   for (let i = 0; i < arr.length; i++) {
     const id = `i${i}`;
     const animationItem = document.createElement("div");
-    animationItem.setAttribute("class", `ball ball${i}`);
+    animationItem.setAttribute("class", `ballList ball${i}`);
     animationItem.setAttribute("id", `${id}`);
     animationItem.innerHTML = arr[i];
     animationContainer.appendChild(animationItem);
