@@ -1,5 +1,5 @@
 import "regenerator-runtime/runtime";
-import Chart from "chart.js/auto";
+import Chart, { elements } from "chart.js/auto";
 import data from "/dist/sorting.json";
 import { config } from "./config";
 import generateList from "./generateList";
@@ -18,7 +18,7 @@ for (let element of config) {
   const algorithmContent = document.createElement("a");
   algorithmContainer.appendChild(algorithmContent);
   algorithmContent.innerHTML = element.algorithm;
-  algorithmContent.setAttribute("href", "#");
+  algorithmContent.setAttribute("href", `#/${element.id}`);
   algorithmContent.setAttribute("id", `${element.id}`);
   sortingContent.appendChild(algorithmContainer);
   document.getElementById(`${element.id}`).onclick = () => {

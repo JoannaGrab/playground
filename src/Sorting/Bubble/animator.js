@@ -37,7 +37,7 @@ function setupAnimation(t1, t2) {
           value: "+=46",
         },
       },
-      600
+      500
     )
     .add(
       {
@@ -46,21 +46,21 @@ function setupAnimation(t1, t2) {
           value: "-=46",
         },
       },
-      600
+      500
     )
     .add(
       {
         targets: t1,
         translateY: 0,
       },
-      1200
+      1000
     )
     .add(
       {
         targets: t2,
         translateY: 0,
       },
-      1200
+      1000
     );
 
   return animation;
