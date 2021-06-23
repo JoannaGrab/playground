@@ -1,3 +1,6 @@
+import createAnimator from "./animator";
+import quickSort from "./algorithm";
+
 export const quicksort = {
   id: "quick_sort",
   algorithm: "Quick Sort",
@@ -18,5 +21,18 @@ export const quicksort = {
     label: "Quick sort analysis",
     backgroundColor: "rgba(55, 90, 6, 2)",
     borderColor: "rgba(55, 90, 6, 2)",
+  },
+  runAnimation: (arr, setup) => {
+    const animator = createAnimator(setup);
+    quickSort(
+      arr,
+      0,
+      arr.length - 1,
+      animator.setupPivot,
+      animator.setupLeft,
+      animator.setupRight,
+      animator.animateSwap,
+      animator.setupColors
+    );
   },
 };

@@ -131,6 +131,7 @@ background: rgb(138, 105, 78);
   padding-left: 0.5em;
   margin-bottom: 2em;
   display: inline-block;
+  background-color: rgb(149, 173, 149);
 }
 .ball {
   width: 1.8em;
