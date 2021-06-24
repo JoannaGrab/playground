@@ -1,3 +1,6 @@
+import { createAnimator } from "./animator";
+import shellSort from "./algorithm";
+
 export const shellsort = {
   id: "shell_sort",
   algorithm: "Shell Sort",
@@ -18,5 +21,15 @@ export const shellsort = {
     label: "Shell sort analysis",
     backgroundColor: "rgba(15, 19, 206, 2)",
     borderColor: "rgba(15, 19, 206, 2)",
+  },
+  runAnimation: (arr, setup) => {
+    const animator = createAnimator(setup);
+    shellSort(
+      arr,
+      animator.displayGap,
+      animator.animateSwap,
+      animator.showCurrent,
+      animator.resetCurrent
+    );
   },
 };
